@@ -1,0 +1,23 @@
+[
+    {
+        "id": "0",
+        "name": "Event Photography",
+        "comment": " Weddings / Christmas parties / Bar Mitzvahs / Birthday",
+        "price": 600,
+        "img": "https://img.freepik.com/free-photo/groom-black-tuxedo-hugs-tender-stunning-bride-while-they-stand_8353-8050.jpg?t=st=1650133310~exp=1650133910~hmac=5f50014ff6db2f48c7181c22537a7b81f339c71a0f69d994ebba256df955f339&w=996"
+    },
+    {
+        "id": "1",
+        "name": "Corporate Photography",
+        "comment": "Classically stiff studio photography, modern, friendly for websites.",
+        "price": 1000,
+        "img": "https://img.freepik.com/free-photo/young-female-product-photographer-studio_23-2148970230.jpg?t=st=1650133596~exp=1650134196~hmac=a0938f3202f0b40ac36b9a56feada3903b31b0bc20c36d85f8e23a683df9ea86&w=996"
+    },
+    {
+        "id": "2",
+        "name": "Social Media Photography",
+        "comment": "Facebook & Instagram photography for local businesses and influncer.",
+        "price": 400,
+        "img": "https://img.freepik.com/free-photo/beautiful-asian-woman-long-hair-influence-show-makeup-step-lives-social-media-with-happiness-joyful_609648-1865.jpg?t=st=1650133481~exp=1650134081~hmac=e87a20bb08abb09f8d48b268f265c41f72e79fc5d5f4b46366064299d3b007c3&w=996"
+    }
+]

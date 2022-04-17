@@ -1,0 +1,21 @@
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 992px) {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

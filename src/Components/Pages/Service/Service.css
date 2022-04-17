@@ -1,0 +1,16 @@
+.service {
+    border-radius: 10px;
+}
+
+.service img {
+    padding: 10px;
+}
+
+.photography-type {
+    font-weight: 600;
+}
+
+.photography-cost {
+    font-weight: 500;
+    ;
+}
