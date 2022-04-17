@@ -1,9 +1,18 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 // import headerLogo from '../../../images/logo/camera.png'
 import './Header.css'
 
 const Header = () => {
+
+    const [user] = useAuthState(auth);
+
+    const handleSignout = () => {
+        signOut(auth)
+    }
     return (
         <div className='header '>
 
@@ -17,14 +26,21 @@ const Header = () => {
                 <div className='link'>
                     <Link to='/home'>Home</Link>
                     <Link to='/services'>Services</Link>
-                    <Link to='/Shop'>Shop</Link>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/signup'>Sign up</Link>
+                    <Link to='/blogs'>Blogs</Link>
+
+                    {
+                        user ?
+                            // <button className='sign-out-btn btn btn-link text-decoration-none text-black' onClick={handleSignout}>Sign out</button>
+                            <p style={{ cursor: 'pointer' }} className='sign-out-btn d-inline text-decoration-none text-black' onClick={handleSignout}>Sign out</p>
+                            :
+                            <Link to='/login'>Login</Link>
+                    }
+
                 </div>
 
             </div>
 
-        </div>
+        </div >
     );
 };
 

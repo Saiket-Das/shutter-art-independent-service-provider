@@ -1,0 +1,8 @@
+.notFound-container {
+    display: flex;
+    justify-content: center;
+}
+
+.notFound-img {
+    width: 600px;
+}

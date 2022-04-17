@@ -7,6 +7,7 @@
 
 
 input[type=email],
+input[type=name],
 input[type=password] {
     margin: 0 auto;
     width: 80%;
@@ -21,6 +22,6 @@ input[type=password] {
     /* background-color: rgb(129, 181, 255); */
     background-color: rgb(25, 135, 253);
     width: 450px;
-    height: 43px;
+    height: 50px;
     border-radius: 25px;
 }

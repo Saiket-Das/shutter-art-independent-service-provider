@@ -1,30 +1,59 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
+
 const Signup = () => {
+
+    const navigate = useNavigate()
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    const handleSignUp = async (event) => {
+        event.preventDefault()
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName: name });
+        navigate('/home')
+    }
+
+
+
+
     return (
         <div className='login-container'>
 
             <h2 className='login-title text-center mt-4 mb-5'>SIGN UP HERE</h2>
 
             <div className='login form'>
-                <Form>
 
+
+                <Form onSubmit={handleSignUp}>
                     {/* EMAIL FIELD */}
                     <Form.Group className="mb-4" controlId="formBasicEmail">
-                        <Form.Control type="email" placeholder="Your name" />
+                        <Form.Control type="name" name='name' placeholder="Your name" />
                     </Form.Group>
 
                     {/* EMAIL FIELD */}
                     <Form.Group className="mb-4" controlId="formBasicEmail">
-                        <Form.Control type="email" placeholder="Your email" />
+                        <Form.Control type="email" name='email' placeholder="Your email" />
                     </Form.Group>
 
                     {/* PASSWORD FIELD */}
                     <Form.Group className="mb-1" controlId="formBasicPassword">
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" name='password' placeholder="Password" />
                     </Form.Group>
 
 

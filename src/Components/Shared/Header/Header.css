@@ -31,10 +31,17 @@
     color: black;
     margin-left: 30px;
     font-weight: 500;
+    /* margin-top: 30px; */
 }
 
 .link a:hover {
     color: rgb(255, 162, 0);
+}
+
+.sign-out-btn {
+    font-weight: 500;
+    margin-top: 12px;
+    margin-left: 28px;
 }
 
 
