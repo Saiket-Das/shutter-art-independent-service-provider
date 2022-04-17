@@ -8,7 +8,6 @@ const Services = () => {
 
     const [services, setServices] = useService()
 
-
     return (
         <div>
             <h2 className='mt-5 text-center'>MY SERVICES</h2>

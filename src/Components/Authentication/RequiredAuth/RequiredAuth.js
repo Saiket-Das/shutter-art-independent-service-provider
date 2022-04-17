@@ -9,16 +9,16 @@ import Loading from '../../Shared/Loading/Loading';
 
 const RequiredAuth = ({ children }) => {
 
-    const location = useLocation()
+    const location = useLocation();
     const [user, loading] = useAuthState(auth);
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
 
     if (loading) {
-        <Loading></Loading>
+        return <Loading></Loading>
     }
 
     if (!user) {
-        return <Navigate to='/login' state={{ form: location }} replace></Navigate>
+        return <Navigate to='/login' state={{ from: location }} replace></Navigate>
     }
 
 
@@ -26,7 +26,7 @@ const RequiredAuth = ({ children }) => {
         return (
             <div className='text-center mt-4'>
                 <h3 className='text-danger'>Your Email is not verified!!</h3>
-                <h5 className='text-success'> Please Verify your email address</h5>
+                <h5 className='text-success'> Please Verify your email.</h5>
 
                 <button
                     className='btn btn-primary'
@@ -35,7 +35,7 @@ const RequiredAuth = ({ children }) => {
                         toast('Sent email');
                     }}
                 >
-                    Send Verification Email Again
+                    Send Verification
                 </button>
                 <ToastContainer></ToastContainer>
 

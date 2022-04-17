@@ -45,10 +45,30 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        padding: 15px;
+    }
+
     .link a {
-
         margin-left: 20px;
+    }
+}
 
+@media only screen and (max-width: 576px) {
+    .navbar {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .link a {
+        margin-left: 20px;
     }
 }

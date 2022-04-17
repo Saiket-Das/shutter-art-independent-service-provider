@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../../Shared/Loading/Loading';
 
 
 
@@ -15,7 +17,8 @@ const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
-    // const location = useLocation();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/'
     let errorPara;
 
     const [
@@ -38,6 +41,13 @@ const Login = () => {
         errorPara = <p className='text-danger text-center'>{error?.message.slice(22, -2)}</p>
     }
 
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
 
 
     const resetPassword = async () => {
@@ -47,8 +57,12 @@ const Login = () => {
             toast('Sent email');
         }
         else {
-            toast('please enter your email address');
+            toast('Please enter your email address');
         }
+    }
+
+    const navToSignUp = event => {
+        navigate('/signup')
     }
 
     return (
@@ -82,9 +96,10 @@ const Login = () => {
                     <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button>
                 </p>
 
-                <p className='text-center'>Are you new user? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick=''>Please Register</Link> </p>
+                <p className='text-center'>Are you new user? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick={navToSignUp}>Please Register</Link> </p>
 
                 <SocialLogin></SocialLogin>
+                <ToastContainer></ToastContainer>
 
             </div>
         </div>

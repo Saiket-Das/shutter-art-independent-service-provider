@@ -12,5 +12,15 @@
 
 .photography-cost {
     font-weight: 500;
-    ;
+}
+
+.book-btn-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.book-btn {
+    width: 110px;
+    border-radius: 15px;
 }

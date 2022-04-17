@@ -12,9 +12,9 @@ const Home = () => {
                 <img src={banner} alt="" />
             </div>
 
-            <div className='mt-5 text-center mb-5'>
-                <Services></Services>
-            </div>
+            {/* <div className='mt-5 text-center mb-5'> */}
+            <Services></Services>
+            {/* </div> */}
         </div>
     );
 };
