@@ -10,7 +10,7 @@ const Service = (props) => {
 
     const navigate = useNavigate()
 
-    const navToServiceDetail = (id, name, img, price) => {
+    const navToServiceDetail = (id) => {
         navigate(`service/${id}`)
     }
 
@@ -25,7 +25,7 @@ const Service = (props) => {
                     <Card.Text>{comment}</Card.Text>
                     <Card.Text className='photography-cost'>Price: ${price}</Card.Text>
                     <div className='book-btn-div'>
-                        <Button className='book-btn' onClick={() => navToServiceDetail(id, name, img, price)} >Book</Button>
+                        <Button className='book-btn' onClick={() => navToServiceDetail(id)} >Book</Button>
                     </div>
                 </Card.Body>
             </Card>

@@ -1,0 +1,19 @@
+.banner-container {
+    width: 60%;
+}
+
+.banner-img {
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .banner-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .banner-container {
+        width: 85%;
+    }
+}

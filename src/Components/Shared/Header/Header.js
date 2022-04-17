@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import CustomHook from '../../Hooks/Active Link/CustomHook';
 import './Header.css'
 
 const Header = () => {
@@ -26,16 +27,18 @@ const Header = () => {
                 </div>
 
                 <div className='link'>
-                    <Link to='/home'>Home</Link>
-                    <Link to='home#services'>Services</Link>
-                    <Link to='/blogs'>Blogs</Link>
+                    <CustomHook className='a' to='/home'>Home</CustomHook>
+
+                    <CustomHook className='a' to='/blogs'>Blogs</CustomHook>
+
+                    <CustomHook className='a' to='/about'>About me</CustomHook>
 
                     {
                         user ?
 
                             <p style={{ cursor: 'pointer' }} className='sign-out-btn d-inline text-decoration-none text-black' onClick={handleSignout}>Sign out</p>
                             :
-                            <Link to='/login'>Login</Link>
+                            <CustomHook className='a' to='/login'>Login</CustomHook>
                     }
 
                 </div>

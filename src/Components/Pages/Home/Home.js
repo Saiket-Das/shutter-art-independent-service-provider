@@ -1,20 +1,18 @@
 import React from 'react';
 import './Home.css'
-import banner from '../../../images/banner/banner.jpg'
+// import banner from '../../../images/banner/banner.jpg'
 import Services from '../Services/Services';
+import Banner from '../Banner/Banner';
 
 
 const Home = () => {
     return (
         <div>
 
-            <div className='banner-img mt-5'>
-                <img src={banner} alt="" />
-            </div>
+            <Banner></Banner>
 
-            {/* <div className='mt-5 text-center mb-5'> */}
-            <Services></Services>
-            {/* </div> */}
+            <Services ></Services>
+
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './ServiceDetail.css'
 import img from '../../../images/social/facebook.png'
+import cart from '../../../images/shopping-cart.png'
 
 
 const ServiceDetails = () => {
@@ -13,7 +14,8 @@ const ServiceDetails = () => {
         <div>
 
             <div className='text-center mt-4'>
-                <h2 className='text-center'>{serviceId}</h2>
+                <h2 className='text-center'>PROCCED TO CHECKOU</h2>
+                <img style={{ width: '100px' }} src={cart} alt="" />
             </div >
             <div className="container mt-5 ">
                 <div className="cart p-3 d-flex">
@@ -37,7 +39,7 @@ const ServiceDetails = () => {
 
             <div className='text-center mt-5 '>
                 <Link to="/checkout">
-                    <button className='btn btn-primary'>Proceed Checkout</button>
+                    <button className='btn py-2 px-5 rounded btn-primary'>Process Checkout</button>
                 </Link>
             </div >
 
