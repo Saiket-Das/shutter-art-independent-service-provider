@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
 
@@ -22,33 +23,21 @@ const Login = () => {
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
 
-                    {/* CHECKBOX FIELD */}
-                    {/* <Form.Group className="mb-3 d-inline" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
-                     */}
-
                     <p className='text-center'>Forget Password?
                         <button className='btn btn-link text-primary text-decoration-none' onClick=''>Reset Password</button>
                     </p>
 
                     {/* SUBMIT BUTTON */}
-                    <Button className='w-50 mx-auto d-block mb-2 submit-button' variant="" type="submit">
+                    <Button className='w-75 mx-auto d-block mb-2 submit-button' variant="" type="submit">
                         Submit
                     </Button>
 
 
                 </Form>
 
-                <p className='text-center'>Are you new user? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick=''>Please Register</Link> </p>
+                <p className='text-center'>Are you new user? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick=''>Please Register</Link> </p>
 
-                <Button className='w-50 mx-auto d-block mb-2 submit-button' variant="" type="submit">
-                    Submit
-                </Button>
-
-                <Button className='w-50 mx-auto d-block mb-2 submit-button' variant="" type="submit">
-                    Submit
-                </Button>
+                <SocialLogin></SocialLogin>
 
             </div>
         </div>

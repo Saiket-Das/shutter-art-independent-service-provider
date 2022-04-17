@@ -18,7 +18,9 @@ input[type=password] {
 }
 
 .submit-button {
-    background-color: rgb(129, 181, 255);
+    /* background-color: rgb(129, 181, 255); */
+    background-color: rgb(25, 135, 253);
+    width: 450px;
     height: 43px;
-    border-radius: 30px;
+    border-radius: 25px;
 }

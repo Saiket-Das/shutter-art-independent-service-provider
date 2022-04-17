@@ -19,6 +19,7 @@ const Header = () => {
                     <Link to='/services'>Services</Link>
                     <Link to='/Shop'>Shop</Link>
                     <Link to='/login'>Login</Link>
+                    <Link to='/signup'>Sign up</Link>
                 </div>
 
             </div>
