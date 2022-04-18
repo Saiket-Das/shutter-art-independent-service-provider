@@ -1,0 +1,43 @@
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.about-title {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-family: 'agright', sans-serif;
+    font-family: 'Rankings Caps', sans-serif;
+
+}
+
+.myself-img {
+    width: 350px;
+}
+
+.myself-description {
+    width: 50%;
+}
+
+.my-goals {
+    font-family: 'Rankings Caps', sans-serif;
+}
+
+@media only screen and (max-width: 800px) {}
+
+@media only screen and (max-width: 576px) {
+    .about-me-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}

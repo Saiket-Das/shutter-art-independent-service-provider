@@ -98,7 +98,11 @@ const Login = () => {
 
                 <p className='text-center'>Are you new user? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick={navToSignUp}>Please Register</Link> </p>
 
-                <hr /> or <hr />
+                <div className='or-hr'>
+                    <hr />
+                    or
+                    <hr />
+                </div>
 
                 <SocialLogin></SocialLogin>
                 <ToastContainer></ToastContainer>

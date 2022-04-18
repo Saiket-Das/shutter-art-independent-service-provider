@@ -85,6 +85,11 @@ const Signup = () => {
                 </Form>
                 {errorPara}
 
+                <div className='or-hr'>
+                    <hr />
+                    or
+                    <hr />
+                </div>
 
                 <p className='text-center'>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick=''>Login here</Link> </p>
 

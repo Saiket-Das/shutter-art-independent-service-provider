@@ -18,18 +18,35 @@ th {
 
 @media only screen and (max-width: 800px) {
 
-    table,
+    table {
+        width: 80%;
+    }
+
     th,
     td {
         width: 50%;
+        font-size: 13px;
+    }
+
+    li {
+        font-size: 13px;
     }
 }
 
 @media only screen and (max-width: 576px) {
 
-
-
-    .ques-2 {
+    table {
         width: 80%;
+    }
+
+    th,
+    td {
+        width: 50%;
+        font-size: 12px;
+    }
+
+    li {
+        font-size: 12px;
+
     }
 }

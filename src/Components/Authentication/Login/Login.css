@@ -24,7 +24,20 @@ input[type=password] {
     border-radius: 25px;
 }
 
+.or-hr {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+}
 
+.or-hr hr {
+    width: 50%;
+    height: 2px;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
 
 
 
