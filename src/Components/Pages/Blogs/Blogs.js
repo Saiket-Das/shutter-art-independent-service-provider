@@ -52,6 +52,23 @@ const Blogs = () => {
                     </div>
                 </ul>
             </div>
+
+            <h4 className='mt-5 text-center ques-2'>Question 3 - Why are you using Firebase? Alternative to Firebase</h4>
+
+            <div className='ques-3 '>
+                <p>Firebase Authentication intends to make it simple to develop secure authentication systems while also enhancing end-user sign-in and onboarding. It offers an end-to-end identity solution, including email and password accounts, phone authentication, and Google, Twitter, Facebook, and GitHub login, among other things.</p>
+
+                <h5 className='text-center'>Alternative to Firebase</h5>
+                <ul className='d-flex justify-content-center'>
+                    <div>
+                        <li>Back4App</li>
+                        <li>AWS Amplify</li>
+                        <li>Kuzzle</li>
+                        <li>Couchbase</li>
+                        <li>NativeScript</li>
+                    </div>
+                </ul>
+            </div>
         </div>
     );
 };
