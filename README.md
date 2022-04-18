@@ -12,5 +12,13 @@ This is a website for an individual photographer who provides his services in ev
 * Route Bootstrap
 * Firebase Authentication Hooks
 * Custom Link
+* React Toastify
 
 
+### About Pages
+
+-> Header : Home, Blogs, About me and Login / Sign out route.
+-> Home : Banner, Services, Service details, Checkout.
+-> Blogs : Answer the of the two questions.
+-> About me : Little bit about me & my future goals.
+-> Login : Authentication, login, signup, sign out forget & reset password, Sign in with Google & Facebook. 
