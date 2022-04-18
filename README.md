@@ -22,3 +22,8 @@ This is a website for an individual photographer who provides his services in ev
 -> Blogs : Answer the of the two questions.
 -> About me : Little bit about me & my future goals.
 -> Login : Authentication, login, signup, sign out forget & reset password, Sign in with Google & Facebook. 
+
+
+### Sometimg that I can't do.
+
+Try to display individually details in ShowDetail's Component by using props and externally export the data and try to match them by using (if-else) conditions. But I can't solve the problem. 
