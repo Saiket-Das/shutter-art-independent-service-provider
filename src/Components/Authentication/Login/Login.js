@@ -92,11 +92,13 @@ const Login = () => {
                 </Form>
 
 
-                <p className='text-center'>Forget Password?
-                    <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button>
+                <p className='d-flex align-items-center justify-content-center'>Forget Password?
+                    <button className='btn btn-link text-primary text-decoration-none ' onClick={resetPassword}>Reset Password</button>
                 </p>
 
                 <p className='text-center'>Are you new user? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick={navToSignUp}>Please Register</Link> </p>
+
+                <hr /> or <hr />
 
                 <SocialLogin></SocialLogin>
                 <ToastContainer></ToastContainer>

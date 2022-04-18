@@ -12,8 +12,6 @@ input[type=password] {
     margin: 0 auto;
     width: 80%;
     padding: 12px 20px;
-    /* margin: 8px 0; */
-
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
@@ -24,4 +22,35 @@ input[type=password] {
     width: 450px;
     height: 50px;
     border-radius: 25px;
+}
+
+
+
+
+
+@media only screen and (max-width: 576px) {
+    .login-container {
+        margin: 50px auto;
+        width: 300px;
+        border: 2px solid rgb(193, 193, 193);
+        border-radius: 10px;
+    }
+
+
+    input[type=email],
+    input[type=name],
+    input[type=password] {
+        margin: 0 auto;
+        width: 80%;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .submit-button {
+        background-color: rgb(25, 135, 253);
+        width: 450px;
+        height: 50px;
+        border-radius: 25px;
+    }
 }

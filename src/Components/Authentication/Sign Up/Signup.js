@@ -3,13 +3,15 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import './Signup.css'
 
 
 const Signup = () => {
 
     const navigate = useNavigate()
-
+    let errorPara;
     const [
         createUserWithEmailAndPassword,
         user,
@@ -26,9 +28,19 @@ const Signup = () => {
 
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName: name });
+    }
+
+    if (user) {
         navigate('/home')
     }
 
+    if (error) {
+        errorPara = <p className='text-danger text-center'>{error?.message.slice(22, -2)}</p>
+    }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
 
 
 
@@ -70,8 +82,9 @@ const Signup = () => {
                         Submit
                     </Button>
 
-
                 </Form>
+                {errorPara}
+
 
                 <p className='text-center'>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick=''>Login here</Link> </p>
 

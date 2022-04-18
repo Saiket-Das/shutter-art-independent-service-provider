@@ -36,15 +36,17 @@ const SocialLogin = () => {
     return (
         <div>
             {/* GOOGLE LOGIN BUTTON  */}
-            <button onClick={() => signInWithGoogle()} className="google-button btn w-75 d-block mx-auto mb-3">
-                <img style={{ width: '30px' }} className='mx-2' src={googleImg} alt="" />
-                <span className='contiune-google'>Contiune with Google</span>
+            <button
+                onClick={() => signInWithGoogle()} className="google-button btn w-75 d-block mx-auto mb-3">
+                <img className='mx-2' src={googleImg} alt="" />
+                <span className='contiune-google'> Google</span>
             </button>
 
-            <button onClick={() => signInWithFacebook()}
+            <button
+                onClick={() => signInWithFacebook()}
                 className="google-button btn w-75 d-block mx-auto mb-4">
-                <img style={{ width: '30px' }} className='mx-2' src={faceBookImg} alt="" />
-                <span className='contiune-google'>Contiune with FaceBook</span>
+                <img className='mx-2' src={faceBookImg} alt="" />
+                <span className='contiune-google'> FaceBook</span>
             </button>
             {errorPara}
         </div>
